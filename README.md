@@ -21,6 +21,8 @@ Users see notifications in the following ways:
   - after you can set your icon setting without the extension .png as option:
    example:
  ```
+ <pre>
+
  			cordova.plugins.notification.local.schedule([{
 				sound: "file://source/sounds/sound.mp3",
 				icon: "res://icon", // --> without .png extension !
@@ -29,6 +31,8 @@ Users see notifications in the following ways:
 				data: "some data",
 				text: "test"
 			}]);
+</pre>
+
  ```
  
 ### Examples of Notification Usage
