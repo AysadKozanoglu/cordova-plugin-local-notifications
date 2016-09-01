@@ -16,7 +16,21 @@ Users see notifications in the following ways:
 - Badging the app’s icon
 - Playing a sound
 
-
+## custom icon issue fix:
+  - put your image file (.png) to the folder "platforms/android/res/drawable"  , where you have to create the folder "drawable"
+  - after you can set your icon setting without the extension .png as option:
+   example:
+ ```
+ 			cordova.plugins.notification.local.schedule([{
+				sound: "file://source/sounds/sound.mp3",
+				icon: "res://icon", // --> without .png extension !
+				id: 1,
+				badge: 2,
+				data: "some data",
+				text: "test"
+			}]);
+ ```
+ 
 ### Examples of Notification Usage
 Local notifications are ideally suited for applications with time-based behaviors, such as calendar and to-do list applications. Applications that run in the background for the limited period allowed by iOS might also find local notifications useful.<br>
 For example, applications that depend on servers for messages or data can poll their servers for incoming items while running in the background; if a message is ready to view or an update is ready to download, they can then present a local notification immediately to inform their users.
